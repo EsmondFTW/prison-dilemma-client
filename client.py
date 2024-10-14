@@ -30,7 +30,7 @@ async def play_rounds(websocket, player_id, rounds, initial_move):
         opponent_prev_move = result_data['move']
 
 async def play_game(player_id, move):
-    uri = "ws://ec2-18-138-22-171.ap-southeast-1.compute.amazonaws.com:6789"
+    uri = "ws://localhost:6789"
     async with websockets.connect(uri) as websocket:
         await websocket.send(player_id)
         rounds = int(await websocket.recv())  # Convert rounds to int
