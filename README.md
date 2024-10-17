@@ -36,3 +36,13 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
+
+## Instruction
+### Set your team number
+In client.py, set your team number in asyncio.run(play_game("your team"))
+![image](https://github.com/user-attachments/assets/d8dac539-a037-4424-b989-aa71567c1d95)
+
+### Code your algo and have fun
+Code your algo in strategy.py
+
+
