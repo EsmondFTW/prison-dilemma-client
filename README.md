@@ -15,3 +15,24 @@ To get started, clone the repository to your local machine using the following c
 ```bash
 git clone https://github.com/EsmondFTW/prison-dilemma-client.git
 cd prison-dilemma-client
+```
+
+### Step 2: Create VENV
+
+```bash
+python -m venv venv
+```
+#### On windows
+```bash
+.\venv\Scripts\activate
+```
+#### On Linux
+```bash
+source venv/bin/activate
+```
+
+### Step 3: install dependencies
+
+```
+pip install -r requirements.txt
+```
