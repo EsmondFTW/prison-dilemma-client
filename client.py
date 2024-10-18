@@ -2,6 +2,7 @@ import asyncio
 import websockets
 import json
 from strategy import strategy  # Import the strategy function
+URI = "ws://ec2-52-221-125-27.ap-southeast-1.compute.amazonaws.com:6789"
 
 async def play_rounds(websocket, player_id, rounds):
     opponent_prev_move = None
@@ -18,8 +19,8 @@ async def play_rounds(websocket, player_id, rounds):
         opponent_prev_move = result_data['move']
 
 async def play_game(player_id):
-    uri = "ws://localhost:6789"
-    async with websockets.connect(uri) as websocket:
+    #uri = "ws://localhost:6789"
+    async with websockets.connect(URI) as websocket:
         await websocket.send(player_id)
         rounds = int(await websocket.recv())  # Convert rounds to int
         print(rounds)
@@ -27,4 +28,4 @@ async def play_game(player_id):
         await play_rounds(websocket, player_id, rounds)
 
 # Run the client
-asyncio.run(play_game("Team_4"))  # args team_id, first move
+asyncio.run(play_game("Team_3"))  # args team_id, first move
